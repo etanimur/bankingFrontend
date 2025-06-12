@@ -4,6 +4,7 @@ import Dashboard from "./pages/dashboard/dashboard";
 import TransferForm from "./pages/dashboard/transfer/TransferForm";
 import Login from "./pages/Authentication/login/login";
 import Signup from "./pages/Authentication/signup/signup";
+import Transactions from "./pages/Transactions/Transactions";
 
 function App() {
   return (
