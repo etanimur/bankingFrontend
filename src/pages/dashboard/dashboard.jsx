@@ -3,7 +3,7 @@ import Sidebar from "../../components/shared/sidebar/sidebar";
 import CardSection from "./components/CardSection/CardSection";
 import TransactionSection from "./components/TransactionSection/TransactionSection";
 import FinancialSummary from "./components/FinancialSummary/FinancialSummary";
-import DailyLimit from "./components/DailyLimit/DailyLimit";
+
 import { PlusIcon } from "lucide-react";
 
 const Dashboard = () => {
@@ -76,10 +76,6 @@ const Dashboard = () => {
                 </div>
                 <h3 className="text-xl font-semibold">{userData.name}</h3>
                 <p className="text-gray-500 text-sm">{userData.accountType}</p>
-                {/* Daily Limit */}{" "}
-                <div className="mt-6 mb-4">
-                  <DailyLimit used={12000} limit={15000} percentage={80} />
-                </div>
               </div>
             </div>
           </div>
