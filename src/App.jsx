@@ -5,16 +5,19 @@ import TransferForm from "./pages/dashboard/transfer/TransferForm";
 import Login from "./pages/Authentication/login/login";
 import Signup from "./pages/Authentication/signup/signup";
 import Transactions from "./pages/Transactions/Transactions";
+import SidebarLayout from "./layout/SidebarLayout";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Dashboard />} />
+        <Route path="/" element={<SidebarLayout />}>
+          <Route path="/" element={<Dashboard />} index />
+          <Route path="/transfer" element={<TransferForm />} />
+          <Route path="/transactions" element={<Transactions />} />
+        </Route>
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/transfer" element={<TransferForm />} />
-        <Route path="/transactions" element={<Transactions />} />
         <Route path="/profile" element={<Login />} />
       </Routes>
     </Router>
