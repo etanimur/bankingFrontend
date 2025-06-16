@@ -95,11 +95,14 @@ const CardSection = ({ cardData }) => {
               </div>
               <span className="text-xs text-gray-600">Request</span>
             </button>
+
             <button className="flex flex-col items-center justify-center py-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-              <div className="mb-1 bg-gray-100 p-2 rounded-full">
-                <Clock size={18} className="text-gray-600" />
-              </div>
-              <span className="text-xs text-gray-600">History</span>
+              <a href="/transactions">
+                <div className="mb-1 bg-gray-100 p-2 rounded-full">
+                  <Clock size={18} className="text-gray-600" />
+                </div>
+                <span className="text-xs text-gray-600">History</span>
+              </a>
             </button>
           </div>
         </div>

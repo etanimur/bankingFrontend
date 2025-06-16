@@ -4,7 +4,7 @@ import Dashboard from "./pages/dashboard/dashboard";
 import TransferForm from "./pages/dashboard/transfer/TransferForm";
 import Login from "./pages/Authentication/login/login";
 import Signup from "./pages/Authentication/signup/signup";
-import Transactions from "./pages/Transactions/Transactions";
+import Transactions from "./pages/dashboard/Transactions/Transactions";
 import SidebarLayout from "./layout/SidebarLayout";
 
 function App() {

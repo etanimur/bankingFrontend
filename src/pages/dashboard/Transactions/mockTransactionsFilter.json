@@ -1,0 +1,20 @@
+[
+  {
+    "id": 21,
+    "accountFrom": "40",
+    "accountTo": "2",
+    "amount": 7000.0,
+    "timeStamp": "2025-04-10T12:30:00.00000",
+    "transactionType": "TRANSFER",
+    "transactionStatus": "SUCCEEDED"
+  },
+  {
+    "id": 22,
+    "accountFrom": "41",
+    "accountTo": "3",
+    "amount": 1500.0,
+    "timeStamp": "2025-04-15T09:45:00.00000",
+    "transactionType": "WITHDRAWAL",
+    "transactionStatus": "PENDING"
+  }
+]
