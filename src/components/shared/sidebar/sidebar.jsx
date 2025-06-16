@@ -8,6 +8,7 @@ import {
   Settings,
   Menu,
   X,
+  History,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -36,19 +37,14 @@ const Sidebar = () => {
       label: "Home",
     },
     {
+      icon: <History size={isMobile ? 20 : 24} />,
+      route: "/transactions",
+      label: "transactions history",
+    },
+    {
       icon: <BarChart2 size={isMobile ? 20 : 24} />,
       route: "/statistics",
-      label: "Statistics",
-    },
-    {
-      icon: <CreditCard size={isMobile ? 20 : 24} />,
-      route: "/cards",
-      label: "Cards",
-    },
-    {
-      icon: <Landmark size={isMobile ? 20 : 24} />,
-      route: "/banking",
-      label: "Banking",
+      label: "stats",
     },
   ];
 

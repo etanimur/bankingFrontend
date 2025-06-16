@@ -1,8 +1,8 @@
-import React from "react";
 import Sidebar from "../../components/shared/sidebar/sidebar";
-import CardSection from "./components/CardSection/CardSection";
-import TransactionSection from "./components/TransactionSection/TransactionSection";
-import FinancialSummary from "./components/FinancialSummary/FinancialSummary";
+import CardSection from "./components/CardSection";
+import TransactionSection from "./components/TransactionSection";
+import FinancialSummary from "./components/FinancialSummary";
+import UserProfile from "./components/UserProfile";
 
 const Dashboard = () => {
   // Mock data that matches the image
@@ -12,7 +12,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto text-left">
       {/* Header Section */}
       <div className="flex justify-between items-center mb-8">
         <div>
@@ -23,6 +23,11 @@ const Dashboard = () => {
             </span>
           </h1>
           <p className="text-gray-500">Welcome back!</p>
+        </div>
+        <div className="">
+          <div className="space-y-6 lg:hidden">
+            <UserProfile userData={userData} />
+          </div>
         </div>
       </div>
 
@@ -54,24 +59,8 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <div className="space-y-6 ">
-          {/* User Profile */}
-          <div className="bg-white rounded-3xl shadow-sm p-6 text-center">
-            <div className="inline-block rounded-full bg-yellow-100 p-4 mb-2">
-              <img
-                src="/avatar.png"
-                alt="User avatar"
-                className="w-16 h-16 rounded-full"
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src =
-                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4YreOWfDX3kK-QLAbAL4ufCPc84ol2MA8Xg&s";
-                }}
-              />
-            </div>
-            <h3 className="text-xl font-semibold">{userData.name}</h3>
-            <p className="text-gray-500 text-sm">{userData.accountType}</p>
-          </div>
+        <div className="space-y-6 max-lg:hidden">
+          <UserProfile userData={userData} />
         </div>
       </div>
     </div>
