@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/dashboard/dashboard";
-import { TransferForm } from "./pages/transferForm/transferForm";
+import { PaymentForm } from "./pages/PaymentForm/PaymentForm";
 
 function App() {
   return (
@@ -13,7 +13,8 @@ function App() {
         <Route path="/banking" element={<Dashboard />} />
         <Route path="/settings" element={<Dashboard />} />
         <Route path="/profile" element={<Dashboard />} />
-        <Route path="/transferform" element={<TransferForm />} />
+        <Route path="/paymentform" element={<PaymentForm />} />
+        <Route path="/t" element={<PaymentForm />} />
       </Routes>
     </Router>
   );
