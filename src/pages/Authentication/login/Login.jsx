@@ -28,31 +28,29 @@ const Login = () => {
   }
 
 
-  return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-50">
-      <div className="flex flex-col gap-3 p-6 bg-white shadow-lg rounded-md w-[90%] max-w-md">
-        <div className="flex flex-col gap-1">
-          <h1 className="text-2xl font-semibold mb-2 text-center">Login</h1>
-          <p className="text-center text-gray-600">Welcome back!</p>
-        </div>
-        <div className="flex flex-col gap-3">
+   return (
+  <div className="flex items-center justify-center min-h-screen bg-gray-100 w-screen overflow-x-hidden">
+    <div className="bg-white shadow-xl rounded-xl w-full max-w-4xl flex flex-col md:flex-row overflow-hidden">
+      
+      {/* Left: Login Form */}
+      <div className="w-full md:w-1/2 p-8">
+        <h1 className="text-2xl font-bold text-center mb-2">Login</h1>
+        <p className="text-center text-gray-600 mb-6">Welcome back!</p>
+
+        <div className="space-y-4">
           <input
-            className="border border-gray-300 px-4 py-2 rounded-lg bg-gray-100 placeholder-gray-500  focus:outline-none focus:ring-2 focus:ring-green-400"
-            placeholder="username"
+            className="w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+            placeholder="Username"
             value={username}
-            onChange={(e)=>{
-                setUsername(e.target.value)
-            }}
+            onChange={(e) => setUsername(e.target.value)}
           />
           <div className="relative w-full">
             <input
-              className="w-full border border-gray-300 px-4 py-2 pr-16 rounded-lg bg-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-400"
+              className="w-full px-4 py-2 pr-16 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
               placeholder="Password"
               type={show ? "text" : "password"}
               value={password}
-              onChange={(e)=>{
-                   setPassword(e.target.value)
-              }}
+              onChange={(e) => setPassword(e.target.value)}
             />
             <button
               onClick={() => setShow(!show)}
@@ -62,12 +60,14 @@ const Login = () => {
               {show ? "Hide" : "Show"}
             </button>
           </div>
-        </div>
-        <div className="flex flex-col gap-2">
-          <button className="border bg-green-600 text-white py-2 rounded hover:bg-green-700 transition"
-           onClick={login}>
+
+          <button
+            className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition"
+            onClick={login}
+          >
             Login
           </button>
+
           <p className="text-sm text-center text-gray-700">
             New user?{" "}
             <span
@@ -79,8 +79,19 @@ const Login = () => {
           </p>
         </div>
       </div>
+
+      <div className="hidden md:flex w-1/2 p-6 items-center justify-center">
+        <img
+          src="/E-Wallet-bro.png"
+          alt="Login illustration"
+          className="max-h-[400px] object-contain max-w-full"
+        />
+      </div>
     </div>
-  );
+  </div>
+);
+
+
 };
 
 export default Login;
