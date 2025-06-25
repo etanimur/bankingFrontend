@@ -81,17 +81,19 @@ const Sidebar = () => {
         {/* Top logo */}
         <div className={`${isMobile ? "mt-12" : "mt-4"}`}>
           <Link to="/" onClick={() => isMobile && setIsOpen(false)}>
-            <div className="flex items-center justify-center w-10 h-10 bg-blue-600 text-white rounded">
-              <div className="flex flex-col items-center">
-                <div className="w-6 h-1 mb-1 bg-white"></div>
-                <div className="w-6 h-1 bg-white"></div>
+            {!isMobile && (
+              <div className="flex items-center justify-center w-10 h-10 bg-blue-600 text-white rounded">
+                <div className="flex flex-col items-center">
+                  <div className="w-6 h-1 mb-1 bg-white"></div>
+                  <div className="w-6 h-1 bg-white"></div>
+                </div>
               </div>
-            </div>
+            )}
           </Link>
         </div>
 
         {/* Navigation icons */}
-        <div className="flex flex-col space-y-6 md:space-y-8">
+        <div className="flex flex-col justify-start  space-y-6 md:space-y-8">
           {sidebarItems.map((item, index) => (
             <Link
               key={index}
@@ -139,7 +141,7 @@ const Sidebar = () => {
       {/* Overlay for mobile */}
       {isMobile && isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-30"
+          className="fixed inset-0 z-30"
           onClick={() => setIsOpen(false)}
         ></div>
       )}

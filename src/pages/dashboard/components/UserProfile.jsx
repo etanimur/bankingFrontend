@@ -28,7 +28,7 @@ const UserProfile = ({ userData }) => {
       {/* User Profile */}
       <div className="bg-white rounded-3xl shadow-sm lg:p-6 text-center relative">
         <div
-          className="inline-block rounded-full bg-yellow-100 lg:p-4 lg:mb-2 cursor-pointer"
+          className="lg:inline-block max-lg:p-2 rounded-full bg-yellow-100 lg:p-4 lg:mb-2 cursor-pointer"
           onClick={handleAvatarClick}
         >
           <img
