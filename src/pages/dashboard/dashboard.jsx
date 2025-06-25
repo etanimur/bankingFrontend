@@ -12,17 +12,17 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto text-left">
+    <div className="p-8">
       {/* Header Section */}
-      <div className="flex justify-between items-center mb-8">
+      <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-2xl font-semibold text-gray-800">
+          <h1 className=" text-4xl text-left font-extrabold text-slate-800 drop-shadow-sm">
             Hello Ronald{" "}
             <span role="img" aria-label="wave">
               👋
             </span>
           </h1>
-          <p className="text-gray-500">Welcome back!</p>
+          <p className="text-gray-500 mb-8 text-s text-left">Welcome back!</p>
         </div>
         <div className="">
           <div className="space-y-6 lg:hidden">

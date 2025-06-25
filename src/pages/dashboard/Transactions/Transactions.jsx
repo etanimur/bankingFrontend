@@ -84,7 +84,9 @@ export default function Transactions() {
 
   return (
     <div className="p-8">
-      <h1 className="font-bold text-4xl text-left">Payments</h1>
+      <h1 className="mb-8 text-4xl text-left font-extrabold text-slate-800 drop-shadow-sm">
+        Payments
+      </h1>
       <div className="flex gap-8 my-8 mb-4">
         <div>
           <div className="text-xs text-left text-gray-500">DURATION</div>
