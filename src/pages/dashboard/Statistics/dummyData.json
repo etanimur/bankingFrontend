@@ -1,0 +1,93 @@
+{
+  "accounts": [
+    {
+      "accountId": 101,
+      "pin": "0000",
+      "accountHolderName": "kamlesh",
+      "balance": 12500.5,
+      "accountType": "SAVINGS",
+      "createdAt": "2025-04-07T14:02:29.666721",
+      "userId": 7,
+      "status": "ACTIVE",
+      "transactionIds": [201, 202, 203, 204, 205],
+      "verified": true
+    },
+    {
+      "accountId": 102,
+      "pin": "0000",
+      "accountHolderName": "kamlesh",
+      "balance": 5000.0,
+      "accountType": "CURRENT",
+      "createdAt": "2025-03-01T10:00:00.000000",
+      "userId": 7,
+      "status": "ACTIVE",
+      "transactionIds": [206, 207],
+      "verified": true
+    }
+  ],
+  "transactions": [
+    {
+      "id": 201,
+      "accountFrom": "101",
+      "accountTo": "102",
+      "amount": 2000.0,
+      "timeStamp": "2025-06-01T09:15:00.000000",
+      "transactionType": "TRANSFER",
+      "transactionStatus": "SUCCEEDED"
+    },
+    {
+      "id": 202,
+      "accountFrom": "102",
+      "accountTo": "101",
+      "amount": 1500.0,
+      "timeStamp": "2025-06-03T11:30:00.000000",
+      "transactionType": "TRANSFER",
+      "transactionStatus": "SUCCEEDED"
+    },
+    {
+      "id": 203,
+      "accountFrom": "101",
+      "accountTo": "999",
+      "amount": 500.0,
+      "timeStamp": "2025-06-05T14:00:00.000000",
+      "transactionType": "WITHDRAW",
+      "transactionStatus": "FAILED"
+    },
+    {
+      "id": 204,
+      "accountFrom": "888",
+      "accountTo": "101",
+      "amount": 3000.0,
+      "timeStamp": "2025-05-20T16:45:00.000000",
+      "transactionType": "TRANSFER",
+      "transactionStatus": "SUCCEEDED"
+    },
+    {
+      "id": 205,
+      "accountFrom": "101",
+      "accountTo": "777",
+      "amount": 1000.0,
+      "timeStamp": "2025-04-15T12:00:00.000000",
+      "transactionType": "TRANSFER",
+      "transactionStatus": "SUCCEEDED"
+    },
+    {
+      "id": 206,
+      "accountFrom": "102",
+      "accountTo": "101",
+      "amount": 2500.0,
+      "timeStamp": "2025-03-10T10:30:00.000000",
+      "transactionType": "TRANSFER",
+      "transactionStatus": "SUCCEEDED"
+    },
+    {
+      "id": 207,
+      "accountFrom": "102",
+      "accountTo": "555",
+      "amount": 1000.0,
+      "timeStamp": "2025-02-25T09:00:00.000000",
+      "transactionType": "WITHDRAW",
+      "transactionStatus": "SUCCEEDED"
+    }
+  ]
+}
