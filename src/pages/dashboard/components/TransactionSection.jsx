@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import mockTransactions from "./mockTransactions";
+import { Link } from "react-router-dom";
 
 const TransactionSection = ({
   accountId = 1,
@@ -126,9 +127,11 @@ const TransactionSection = ({
       </div>
 
       {/* See all button */}
-      <button className="w-full text-center py-3 text-gray-500 mt-4 text-sm">
-        See All
-      </button>
+      <Link to={"/transactions"}>
+        <button className="w-full text-center py-3 text-gray-500 mt-4 text-sm">
+          See All
+        </button>
+      </Link>
     </div>
   );
 };
